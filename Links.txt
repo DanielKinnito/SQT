@@ -1,0 +1,26 @@
+https://codesandbox.io/p/devbox/currency-converter-latest-forked-5qk4x2?file=%2Fscript.js%3A13%2C29
+
+https://5qk4x2-5000.csb.app/converter
+
+User Story: Sign up
+As a new user, I want to sign up for an account on the website with my full name, chosen username, and password.
+
+Acceptance Criteria:
+1. The sign-up page should include fields for entering the user's full name, chosen username, and password.
+2. Users should be able to submit the sign-up form by clicking on a "Sign Up" button.
+3. The system should validate the user's input to ensure that all required fields (full name, username, and password) are filled out.
+4. The chosen username must be unique across the system. If the chosen username is already taken, an error message should be displayed, prompting the user to choose a different one.
+5. The password field should have appropriate password strength requirements (min 8 characters, at least 1 capital letter and 1 number, and 1 special characters) and provide feedback to the user if the entered password does not meet the criteria.
+6. Upon successful sign-up, users should see a message indicating that their account has been successfully created.
+
+/////////////////////////////////////////
+
+UserStrory: Sign in
+As a user, I want to be able to log in to the website using my email and password.
+
+Acceptance Criteria:
+1. The login page should have fields for entering email and password.
+2. Users should be able to submit the login form by clicking on a "Login" button.
+3. If the email or password is incorrect, an error message should be displayed.
+4. Upon successful login, users should be redirected to their dashboard page.
+5. Users should stay logged in even if they navigate away from the website and return later.
