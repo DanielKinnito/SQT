@@ -1,0 +1,91 @@
+# A- User Story: Sign Up
+
+Acceptance Criteria:
+1. The sign-up page should include fields for entering the user's full name, chosen username, and password.
+2. Users should be able to submit the sign-up form by clicking on a "Sign Up" button.
+3. The system should validate the user's input to ensure that all required fields (full name, username, and password) are filled out.
+4. The chosen username must be unique across the system. If the chosen username is already taken, an error message should be displayed, prompting the user to choose a different one.
+5. The password field should have appropriate password strength requirements (min 8 characters, at least 1 capital letter and 1 number, and 1 special characters) and provide feedback to the user if the entered password does not meet the criteria.
+6. Upon successful sign-up, users should see a message indicating that their account has been successfully created.
+
+## Test cases- Signup:
+ATC1: <valid name valid username and valid password, successfully Signup notification>
+ATC2: <valid name and invalid password, error message>
+ATC3: <invalid name and valid password, error message>
+ATC4: <empty name and valid password, 'please fill out this form'>
+ATC4: <valid name and empty password, 'please fill out this form'>
+ATC5: <valid already existing name and valid password, 'Username already exists. Please choose another one.'>
+ATC6: <have three fields for username, chosen name and password>
+ATC7: <not allow sql injection>
+ATC8: <not allow XSS>
+
+
+## Bugs found
+1. On ATC1 it doesnt show a notification for a successful Signup.
+2. On ATC6 it doesnt have a 3rd field for chosen name.
+3. On ATC2, it allowed invalid username to be accepted.
+4. On ATC7 it allowed sql injection.
+5. On ATC8 it is vulnerable for XSS as it uses innerHTML.
+
+
+
+# B- UserStrory: Sign in
+As a user, I want to be able to log in to the website using my email and password.
+
+## Acceptance Criteria:
+1. The login page should have fields for entering email and password.
+2. Users should be able to submit the login form by clicking on a "Login" button.
+3. If the email or password is incorrect, an error message should be displayed.
+4. Upon successful login, users should be redirected to their dashboard page.
+5. Users should stay logged in even if they navigate away from the website and return later.
+
+## Test cases- Signin:
+BTC1: <valid name and valid password, successfully login>
+BTC2: <valid name and invalid/incorrect password, error message>
+BTC3: <invalid name and valid password, error message>
+BTC4: <empty name and valid password, 'please fill out this form'>
+BTC4: <valid name and empty password, 'please fill out this form'>
+BTC5: <have 2 fields for email and password>
+BTC6: <not allow sql injection>
+BTC7: <not allow XSS>
+BTC8: <it should have a forgot password functionality for users to use.>
+BTC9: it should allow the user to logout.
+
+## Bugs found
+1. On BTC1 it doesnt have a 3rd field for chosen name.
+2. On BTC5 it only has username and password. No email input
+3. On BTC6 it allowed sql injection.
+5. On BTC7 it is vulnerable for XSS as it uses innerHTML.
+6. On BTC8 it doesnt have a forgot password functionality.
+7. On BTC9 it doesnt allow the user to logout, it doesnt have that functionality.
+
+# C -User story: currency coverter
+As a logged in user, I want to be able to convert currency.
+
+## Acceptance Criteria :
+1. The currency convert page should have a fields to choose from and to currency codes.
+2. The user should be able to input the 'from' currency value and get the current rate of that specific value.
+3. The user should not be able to edit the result rate.
+4. The user should be able to switch the from and to dropdowns and get the result.
+5. The user should be able to get the last updated time of the latest currency rate and the current date and time.
+
+## Test cases- Signin:
+CTC1: <valid input, valid and accurate conversion>
+CTC2: <invalid input, live validation>
+CTC3: <swap button pushed, correectly convert.>
+CTC4: <not allow sql injection>
+CTC5: <not allow XSS>
+CTC6: <should be secure in its api usage>
+CTC7: <empty input field, empty output/conversion field>
+
+
+## Bugs found
+1. On CTC1 it rounds up conversion when it gets too large.
+2. On CTC2 it only shows error messages not validation. 
+3. On CTC2 it shows the error message per invalid characters inputted.
+4. Ont CTC3 when given large numbers and the swap button is pushed, it rounds up.i.e inaccurrate output.
+5. On CTC4 it is vulnerable for sql injection.
+6. On CTC5 it is vulnerable for XSS
+7. On CTC6 its api is out in the open i.e not secure.
+8. On CTC2 it allowed for a white-space to be accepted.
+9. On CTC7 it displayed 0 for an empty field when it should be empty.
