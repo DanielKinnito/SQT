@@ -24,7 +24,7 @@ ATC8: <not allow XSS>
 1. On ATC1 it doesnt show a notification for a successful Signup.
 2. On ATC6 it doesnt have a 3rd field for chosen name.
 3. On ATC2, it allowed invalid username to be accepted.
-4. On ATC7 it allowed sql injection.
+4. On ATC7 it is vulnerable for sql injection.
 5. On ATC8 it is vulnerable for XSS as it uses innerHTML.
 
 
@@ -58,6 +58,7 @@ BTC9: it should allow the user to logout.
 5. On BTC7 it is vulnerable for XSS as it uses innerHTML.
 6. On BTC8 it doesnt have a forgot password functionality.
 7. On BTC9 it doesnt allow the user to logout, it doesnt have that functionality.
+8. On BTC1 it doesnt allow for a valid username and password from another device.
 
 # C -User story: currency coverter
 As a logged in user, I want to be able to convert currency.
@@ -82,10 +83,11 @@ CTC7: <empty input field, empty output/conversion field>
 ## Bugs found
 1. On CTC1 it rounds up conversion when it gets too large.
 2. On CTC2 it only shows error messages not validation. 
-3. On CTC2 it shows the error message per invalid characters inputted.
-4. Ont CTC3 when given large numbers and the swap button is pushed, it rounds up.i.e inaccurrate output.
+3. On CTC2 it shows the error message per invalid characters inputted. Redundant error messages.
+4. On CTC3 when given large numbers and the swap button is pushed, it rounds up.i.e inaccurrate output.
 5. On CTC4 it is vulnerable for sql injection.
 6. On CTC5 it is vulnerable for XSS
 7. On CTC6 its api is out in the open i.e not secure.
 8. On CTC2 it allowed for a white-space to be accepted.
 9. On CTC7 it displayed 0 for an empty field when it should be empty.
+10. On CTC7 and CTC3 it allowed for swapping and conversion of empty input.
