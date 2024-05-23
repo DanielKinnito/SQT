@@ -78,6 +78,7 @@ CTC4: <not allow sql injection>
 CTC5: <not allow XSS>
 CTC6: <should be secure in its api usage>
 CTC7: <empty input field, empty output/conversion field>
+CTC8: allow for quick conversion
 
 
 ## Bugs found
@@ -91,3 +92,4 @@ CTC7: <empty input field, empty output/conversion field>
 8. On CTC2 it allowed for a white-space to be accepted.
 9. On CTC7 it displayed 0 for an empty field when it should be empty.
 10. On CTC7 and CTC3 it allowed for swapping and conversion of empty input.
+11. On CTC8 it freezes up when taksed with multiple queries in succession. Problem with fetching.
