@@ -24,3 +24,15 @@ Acceptance Criteria:
 3. If the email or password is incorrect, an error message should be displayed.
 4. Upon successful login, users should be redirected to their dashboard page.
 5. Users should stay logged in even if they navigate away from the website and return later.
+
+////////////////////////////////////////
+
+User story: currency coverter
+As a logged in user, I want to be able to convert currency.
+
+Acceptance Criteria :
+1. The currency convert page should have a fields to choose from and to currency codes.
+2. The user should be able to input the 'from' currency value and get the current rate of that specific value.
+3. The user should not be able to edit the result rate.
+4. The user should be able to switch the from and to dropdowns and get the result.
+5. The user should be able to get the last updated time of the latest currency rate and the current date and time.
