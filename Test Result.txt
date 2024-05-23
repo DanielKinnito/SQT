@@ -88,4 +88,4 @@ CTC8: allow for quick conversion
 7. On CTC2 it allowed for white-space to be accepted. Granted it displayed 'undefined' for it.
 8. On CTC7 it displayed 0 for an empty field when it should be empty.
 9. On CTC7 and CTC3 it allowed for swapping and conversion of empty input.
-10. On CTC8 it freezes up when taksed with multiple queries in succession. Problem with fetching.
+10. On CTC8 it freezes up when taksed with multiple queries in quick succession. Problem with fetching.
