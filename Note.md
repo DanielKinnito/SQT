@@ -1,10 +1,13 @@
 # Notes
-
-## Automated Test why?
+Arr
+act
+assert
+## Automated Test
+### Automated Test why?
 -Humanly impossible test suuits
 -Regression Tests
 -Efficiency in time
-## Disadvantages
+### Disadvantages
 -Biased Tests
 -Experienced tester
 -UAT
